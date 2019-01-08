@@ -1,6 +1,6 @@
-# Groupe PSA API standards
+# API standards
 
-Standards and guidelines for Groupe PSA REST APIs.
+Standards and guidelines for REST APIs.
 * [API Design Guidelines](api-style-guide.md)
 * [References](references.md)
 

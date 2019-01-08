@@ -1,9 +1,9 @@
 
-# Groupe PSA API Design Guidelines
+# API Design Guidelines
 
 ## Introduction
 
-This repository provides guidelines and examples for APIs at PSA. These guidelines intend to encourage consistency, maintainability, and best practices across all APIs and applications.
+This repository provides guidelines and examples for REST APIs. These guidelines intend to encourage consistency, maintainability, and best practices across all APIs and applications.
 
 These guidelines were strongly inspired from [Paypal's API Standards](https://github.com/paypal/api-standards) and some other [references](references.md).
 
@@ -418,8 +418,6 @@ GET /cars/9837127  HTTP/1.1
 
 For additional examples, please refer to this [list of public hypermedia APIs using HAL](https://github.com/mikekelly/hal_specification/wiki/APIs)
 
-Example of existing PSA APIs using HAL : [Connected Car 2.0.0](https://developer-preprod.psa-peugeot-citroen.com/inc/node/644)
-
 #### Paginating With HAL
 
 Pagination can be made easier for the consumer by returning preformatted URIs to fetch the **next** and **previous** pages. All APIs using hypermedia MUST perform pagination using HAL.
@@ -463,7 +461,7 @@ GET /cars/  HTTP/1.1
 
 ## URI Structure
 
-APIs at PSA MUST be be formatted with the following components : 
+APIs MUST be be formatted with the following components : 
  - **protocol** : must always be `https`
  - **environment** : could be `prod`, `preprod` or `dev`
  - **api** : specifies that this specific URI is an API endpoint
@@ -557,7 +555,7 @@ APIs are more **precise** and **consistent**. They are **easier to understand** 
 
 `/company;name=value/customers` : apply filters to a particular path element. **Matrix params are rarely used** but can be useful in some particular use case, and thus should be kept in mind.
 
-**Example** : `GET /companies;name=PSA/customers` used to target all customers from company `PSA` 
+**Example** : `GET /companies;name=Microsoft/customers` used to target all customers from company `Microsoft` 
 
 ## Filtering, Selecting & Sorting 
 
